@@ -1,0 +1,16 @@
+use sea_orm::{ConnectOptions, Database, DatabaseConnection};
+use sea_orm_migration::MigratorTrait;
+
+use crate::Migrator;
+
+pub struct DolrAirdrop(pub DatabaseConnection);
+
+impl DolrAirdrop {
+    pub async fn connect_and_migrate(config: impl Into<ConnectOptions>) -> utils::Result<Self> {
+        let db = Database::connect(config).await?;
+
+        Migrator::up(&db, None).await?;
+
+        Ok(Self(db))
+    }
+}
