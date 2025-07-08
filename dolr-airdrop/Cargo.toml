@@ -5,7 +5,7 @@ edition = "2021"
 publish = false
 
 [lib]
-name = "dorl_airdrop"
+name = "dolr_airdrop"
 path = "src/lib.rs"
 
 [dependencies]
