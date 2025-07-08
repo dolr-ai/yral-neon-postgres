@@ -1,4 +1,4 @@
-use dorl_airdrop::Migrator;
+use dolr_airdrop::Migrator;
 use sea_orm_migration::prelude::*;
 
 #[async_std::main]

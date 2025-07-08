@@ -3,6 +3,7 @@ use sea_orm_migration::MigratorTrait;
 
 use crate::Migrator;
 
+#[derive(Debug, Clone)]
 pub struct DolrAirdrop(pub DatabaseConnection);
 
 impl DolrAirdrop {
