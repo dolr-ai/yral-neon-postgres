@@ -1,0 +1,16 @@
+[package]
+name = "yral-notification"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "yral_notification"
+path = "src/lib.rs"
+
+[dependencies]
+async-std = { workspace = true }
+sea-orm-migration = { workspace = true }
+sea-orm = { workspace = true }
+
+utils = { workspace = true }
